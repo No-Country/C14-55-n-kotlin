@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/inicioSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp"
+            android:layout_weight="1"
+            android:paddingStart="30dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:paddingTop="4dp"
+            android:src="@drawable/baseline_notifications"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineaSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#000000"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayoutNavBar"/>
+
+    <View
+        android:id="@+id/CuadroIngresoEgreso"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/input_bg"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@id/lineaSuperior">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/lineaSuperior">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:gravity="start"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintTop_toBottomOf="@id/lineaSuperior">
+
+
+            <TextView
+                android:id="@+id/textViewIngresos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingresos"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="70dp" />
+
+            <TextView
+                android:id="@+id/textViewNumeroIngresos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7000"
+                tools:layout_editor_absoluteX="51dp"
+                tools:layout_editor_absoluteY="93dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/lineaSuperior">
+
+            <TextView
+                android:id="@+id/textViewBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balance"
+                tools:layout_editor_absoluteX="176dp"
+                tools:layout_editor_absoluteY="89dp" />
+
+            <TextView
+                android:id="@+id/textViewNumeroBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-3000"
+                tools:layout_editor_absoluteX="187dp"
+                tools:layout_editor_absoluteY="112dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="start"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/lineaSuperior">
+
+            <TextView
+                android:id="@+id/textViewEgresos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Egresos"
+                tools:layout_editor_absoluteX="312dp"
+                tools:layout_editor_absoluteY="70dp" />
+
+            <TextView
+                android:id="@+id/textViewNumeroEgresos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10000"
+                tools:layout_editor_absoluteX="312dp"
+                tools:layout_editor_absoluteY="93dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
